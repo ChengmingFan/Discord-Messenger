@@ -1,9 +1,9 @@
 [
   {
-    "username": "",
-    "token": "",
+    "username": "Your discord username, just to identify when you have multiple discord accounts",
+    "token": "Your discord token",
     "cooldown": 60,
-    "channel_id": "",
+    "channel_id": "discord channel id you want to send messages",
     "spam_times": 200,
     "messages": [
       "Keep active",
