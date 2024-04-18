@@ -1,5 +1,5 @@
 # Discord-Messenger
-A python script for sending messages in specific discord channels automatically.
+A python script for sending (specific or random) messages in specific discord channels automatically.
 
 ## How to use
 1. Get your discord token from the console of your browser
