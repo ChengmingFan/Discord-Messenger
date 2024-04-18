@@ -8,7 +8,8 @@ with open("config.json", 'r') as f:
     messagers = []
     for item in data:
         messager = DiscordMessager(**item)
-        messagers.append(messager)
+        if messager.enable:
+            messagers.append(messager)
 
 
 def run(obj):
