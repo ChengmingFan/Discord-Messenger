@@ -1,0 +1,15 @@
+[
+  {
+    "username": "",
+    "token": "",
+    "cooldown": 60,
+    "channel_id": "",
+    "spam_times": 200,
+    "messages": [
+      "Keep active",
+      "Keep grinding",
+      "ok:)"
+    ],
+    "enable": false
+  }
+]
