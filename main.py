@@ -1,15 +1,15 @@
 import json
 import threading
 
-from DiscordMessager import DiscordMessager
+from DiscordMessenger import DiscordMessager
 
 with open("config.json", 'r') as f:
     data = json.load(f)
-    messagers = []
+    messengers = []
     for item in data:
-        messager = DiscordMessager(**item)
-        if messager.enable:
-            messagers.append(messager)
+        messenger = DiscordMessager(**item)
+        if messenger.enable:
+            messengers.append(messenger)
 
 
 def run(obj):
@@ -17,8 +17,8 @@ def run(obj):
 
 
 threads = []
-for item in messagers:
-    threads.append(threading.Thread(target=run, args=(item,)))
+for messenger in messengers:
+    threads.append(threading.Thread(target=run, args=(messenger,)))
 
 for thread in threads:
     thread.start()

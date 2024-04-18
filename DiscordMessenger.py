@@ -2,6 +2,7 @@ from datetime import datetime
 import requests, time, json
 from random import *
 
+
 class DiscordMessager:
     def __init__(self, username, token, cooldown, channel_id, spam_times, messages, enable):
         self.username = username
@@ -18,7 +19,7 @@ class DiscordMessager:
         return cls(**json_data)
 
     def __repr__(self):
-        return f"DiscordMessager(username={self.username}, token={self.token}, cooldown={self.cooldown}, channel_id={self.channel_id}, spam_times={self.spam_times}, messages={self.messages})"
+        return f"DiscordMessenger(username={self.username}, token={self.token}, cooldown={self.cooldown}, channel_id={self.channel_id}, spam_times={self.spam_times}, messages={self.messages})"
 
     def start(self):
         if not self.enable:
@@ -53,7 +54,8 @@ class DiscordMessager:
                 "nonce": randint(1, 100000),
                 "tts": False
             }
-            r = requests.request("POST", f"https://discord.com/api/v9/channels/{self.channel_id}/messages", json=payload,
+            r = requests.request("POST", f"https://discord.com/api/v9/channels/{self.channel_id}/messages",
+                                 json=payload,
                                  headers=global_headers)
             if r.status_code == 200:
                 print(f"[Sucess] Message Sent in {self.channel_id} channel by user {self.username} at {datetime.now()}")
