@@ -47,7 +47,7 @@ class DiscordMessager:
 
         error_exit = 0
 
-        for i in (range(int(self.spam_times))):
+        for _ in (range(int(self.spam_times))):
             message = choice(self.messages)
             payload = {
                 "content": message,
